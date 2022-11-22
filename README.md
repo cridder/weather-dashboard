@@ -1,10 +1,15 @@
 # weather-dashboard
 
+page - https://cridder.github.io/weather-dashboard/ 
+
+repo - https://github.com/cridder/weather-dashboard 
+
 https://courses.bootcampspot.com/courses/2756/assignments/42560?module_item_id=799420
 
 ## Weather Dashboard
 
 Server-Side APIs Challenge: Weather Dashboard
+
 Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
 
 
