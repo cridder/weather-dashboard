@@ -1,12 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    Weather Dashboard
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid bg-white">
+      <div class="container">
+        <h1 class="display-4 text-center bg-white">Weather Dashboard</h1>
+      </div>
+    </div>
+    <main class="d-flex min-vw-100">
+      <div class="container-fluid border border-dark">
+        <div class="row border border-dark">
+          <div class="col-sm-4 border">
+            <p>Search for a City</p>
+            <div class="form-group">
+              <input
+                type="city"
+                class="form-control"
+                id="city"
+                placeholder="City"
+                name="city"
+              />
+            </div>
+            <button type="button" class="btn btn-primary">Primary</button>
+            <hr />
+            <div class="col border">
+              <button type="button" class="btn btn-info btn-block">Info</button>
+              <button type="button" class="btn btn-info btn-block">Info</button>
+              <button type="button" class="btn btn-info btn-block">Info</button>
+              <button type="button" class="btn btn-info btn-block">Info</button>
+              <button type="button" class="btn btn-info btn-block">Info</button>
+              <button type="button" class="btn btn-info btn-block">Info</button>
+              <button type="button" class="btn btn-info btn-block">Info</button>
+              <button type="button" class="btn btn-info btn-block">Info</button>
+            </div>
+          </div>
+          <div class="col-sm-8 border">
+            2 of 3 (wider)
+            <div class="container">
+              <ul class="list-group">
+                <li class="list-group-item border-0 h1">First item</li>
+                <li class="list-group-item border-0 h4">Second item</li>
+                <li class="list-group-item border-0 h4">Third item</li>
+                <li class="list-group-item border-0 h4">Fourth item</li>
+              </ul>
+              <hr />
+              <div class="card-deck">
+                <div class="card bg-secondary text-white">
+                  <div class="card-body text-center">
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                  </div>
+                </div>
+                <div class="card bg-secondary text-white">
+                  <div class="card-body text-center">
+                    <p class="card-text">Some text inside the second card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                  </div>
+                </div>
+                <div class="card bg-secondary text-white">
+                  <div class="card-body text-center">
+                    <p class="card-text">Some text inside the third card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                  </div>
+                </div>
+                <div class="card bg-secondary text-white">
+                  <div class="card-body text-center">
+                    <p class="card-text">Some text inside the fourth card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                  </div>
+                </div>
+                <div class="card bg-secondary text-white">
+                  <div class="card-body text-center">
+                    <p class="card-text">Some text inside the fourth card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                    <p class="card-text">Some text inside the first card</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
