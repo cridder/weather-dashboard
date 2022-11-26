@@ -8,11 +8,14 @@
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/"
-/>    
-    
+    />    
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
@@ -28,17 +31,18 @@
           <div class="col-sm-4 border">
             <p>Search for a City</p>
             <div class="form-group">
-              <input
-                type="city"
-                class="form-control"
-                id="search"
-                placeholder="Enter name of city....."
-                name="city"
-              />
-            </div> 
-            <div id="match-list"></div>   
-                    
-            <button type="button" class="btn btn-primary btn-block">Primary</button>
+              <input type="search" class="form-control" id="search" placeholder="City" name="city" />
+            </div>
+
+            <!--  -->
+            <!-- <p>Search for a City</p> -->
+            <!-- <div> -->
+              <!-- <label for="search">Enter name of city.....</label> -->
+              <!-- <input type="text" class="form-control" id="search" placeholder="Enter name of city....."/> -->
+            <!-- </div> -->
+            <!--  -->
+
+                        <button type="button" class="btn btn-primary btn-block">Primary</button>
             <hr />
               <button type="button" class="btn btn-info btn-block">Info</button>
               <button type="button" class="btn btn-info btn-block">Info</button>
@@ -117,8 +121,8 @@
         </div>
       </div>
     </main>    <!-- Added link to the jQuery library -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script type="text/javascript" src="./assets/js/script.js">
     </script>
   </body>
