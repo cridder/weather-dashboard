@@ -17,9 +17,9 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <div class="jumbotron jumbotron-fluid bg-white">
-      <div class="container">
-        <h1 class="display-4 text-center bg-white">Weather Dashboard</h1>
+    <div class="jumbotron jumbotron-fluid bg-white" id="jumbo">
+      <div class="container" id="01container">
+        <h1 class="display-4 text-center bg-white" id="jumboTitle">Weather Dashboard</h1>
       </div>
     </div>
     <main class="d-flex min-vw-100">
@@ -31,11 +31,12 @@
               <input
                 type="city"
                 class="form-control"
-                id="city"
-                placeholder="City"
+                id="search"
+                placeholder="Enter name of city....."
                 name="city"
               />
-            </div>    
+            </div> 
+            <div id="match-list"></div>   
                     
             <button type="button" class="btn btn-primary btn-block">Primary</button>
             <hr />
