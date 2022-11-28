@@ -14,8 +14,8 @@ const searchApi = async (searchText) => {
   // get matches to current text input
   let matches = statesApi.filter((city) => {
     const regexApi = new RegExp(`^${searchText}`, "gi");
-    // return city.name.match(regexApi) || city.state.match(regexApi);
-    return city.name.match(regexApi);
+    return city.name.match(regexApi) || city.state.match(regexApi);
+    // return city.name.match(regexApi);
   });
   // if length 0 then array is empty
   if (searchText.length === 0) {
