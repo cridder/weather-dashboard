@@ -10,45 +10,54 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
+  <!-- end head -->
   <body>
     <div class="jumbotron jumbotron-fluid bg-white" id="jumbo">
       <div class="container" id="01container">
         <h1 class="display-4 text-center bg-white" id="jumboTitle">Weather Dashboard</h1>
       </div>
     </div>
+    <!-- end div -->
     <main class="d-flex min-vw-100">
       <div class="container-fluid border border-dark">
         <div class="row border border-dark">
           <div class="col-sm-4 border">
-            <!-- <p>Search for a City</p> -->
             <div class="form-group">
               <input type="search" class="form-control" id="search" placeholder="Search for a City" name="city" />
             </div>
             <button id="search-button" type="submit" class="btn btn-primary btn-block">Search</button>
-            <!--  -->
-            <!-- <p>Search for a City</p> -->
-            <!-- <div> -->
-              <!-- <label for="search">Enter name of city.....</label> -->
-              <!-- <input type="text" class="form-control" id="search" placeholder="Enter name of city....."/> -->
-            <!-- </div> -->
-            <!--  -->
-
-                        
             <hr />
-
             <ul id="city-list" class="list-group"></ul> 
-
+            <!-- end history list-->
           </div>
+          <!-- end left column -->
           <div id="current-and-cards" class="col-sm-8 border">
-            2 of 3 (wider)
             <div class="container-fluid">
-              <ul id="current-list" class="list-group">
+              <h4>Currently: 2 of 3 (wider)</h4>
+
+              <div id="current-weather" class='card'>
+                <div class="card-body">
+                  <div id="city-date-icon">
+                    <span id='city-name'> </span>
+                    <span id='current-icon'></span>
+                  </div>
+                    <p class="card-text" id="current-temp"></p>
+                    <p class="card-text" id="current-humidity"></p>
+                    <p class="card-text" id="current-wind"></p>
+                    <p class="card-text" id="current-uv"></p>
+                        <!-- </ul> -->
+                </div>
+              </div>
+
+              <!-- <ul id="current-list" class="list-group">
                 <li class="list-group-item border-0 h1">First item</li>
                 <li class="list-group-item border-0 h4">Second item</li>
                 <li class="list-group-item border-0 h4">Third item</li>
                 <li class="list-group-item border-0 h4">Fourth item</li>
-              </ul>
+              </ul> -->
+
               <hr />
+              <h4>5-Day Forecast:</h4>
               <div class="card-deck">
                 <div  id="card-list" class="card bg-secondary text-white">
                   <div class="card-body text-center">
@@ -104,11 +113,15 @@
             </div>
           </div>
         </div>
+        <!-- end left to right row -->
       </div>
-    </main>    <!-- Added link to the jQuery library -->
+    </main> 
+    <!-- end main -->
+  <!-- Added link to the jQuery library -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
   <script type="text/javascript" src="./assets/js/script.js"></script>
   <!-- <script type="text/javascript" src="./assets/js/Examplescript.js"></script> -->
   </body>
+  <!-- end body -->
 </html>
