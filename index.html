@@ -20,11 +20,11 @@
       <div class="container-fluid border border-dark">
         <div class="row border border-dark">
           <div class="col-sm-4 border">
-            <p>Search for a City</p>
+            <!-- <p>Search for a City</p> -->
             <div class="form-group">
-              <input type="search" class="form-control" id="search" placeholder="City" name="city" />
+              <input type="search" class="form-control" id="search" placeholder="Search for a City" name="city" />
             </div>
-
+            <button id="search-button" type="submit" class="btn btn-primary btn-block">Search</button>
             <!--  -->
             <!-- <p>Search for a City</p> -->
             <!-- <div> -->
@@ -33,22 +33,16 @@
             <!-- </div> -->
             <!--  -->
 
-                        <button type="button" class="btn btn-primary btn-block">Primary</button>
+                        
             <hr />
-              <button type="button" class="btn btn-info btn-block">Info</button>
-              <button type="button" class="btn btn-info btn-block">Info</button>
-              <button type="button" class="btn btn-info btn-block">Info</button>
-              <button type="button" class="btn btn-info btn-block">Info</button>
-              <button type="button" class="btn btn-info btn-block">Info</button>
-              <button type="button" class="btn btn-info btn-block">Info</button>
-              <button type="button" class="btn btn-info btn-block">Info</button>
-              <button type="button" class="btn btn-info btn-block">Info</button>
+
+            <ul id="city-list" class="list-group"></ul> 
 
           </div>
-          <div class="col-sm-8 border">
+          <div id="current-and-cards" class="col-sm-8 border">
             2 of 3 (wider)
             <div class="container-fluid">
-              <ul class="list-group">
+              <ul id="current-list" class="list-group">
                 <li class="list-group-item border-0 h1">First item</li>
                 <li class="list-group-item border-0 h4">Second item</li>
                 <li class="list-group-item border-0 h4">Third item</li>
@@ -56,7 +50,7 @@
               </ul>
               <hr />
               <div class="card-deck">
-                <div class="card bg-secondary text-white">
+                <div  id="card-list" class="card bg-secondary text-white">
                   <div class="card-body text-center">
                     <p class="card-text">Some text inside the first card</p>
                     <p class="card-text">Some text inside the first card</p>
