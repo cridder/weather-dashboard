@@ -5,16 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/"/>    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <!-- end head -->
   <body>
     <div class="jumbotron jumbotron-fluid bg-white" id="jumbo">
       <div class="container" id="01container">
-        <h1 class="display-4 text-center bg-white" id="jumboTitle">Weather Dashboard</h1>
+        <h1 class="display-4 text-center bg-white" id="jumboTitle">
+          Weather Dashboard
+        </h1>
       </div>
     </div>
     <!-- end div -->
@@ -23,11 +34,23 @@
         <div class="row border border-dark">
           <div class="col-sm-4 border">
             <div class="form-group">
-              <input type="search" class="form-control" id="search" placeholder="Search for a City" name="city" />
+              <input
+                type="search"
+                class="form-control"
+                id="search"
+                placeholder="Search for a City"
+                name="city"
+              />
             </div>
-            <button id="search-button" type="submit" class="btn btn-primary btn-block">Search</button>
+            <button
+              id="search-button"
+              type="submit"
+              class="btn btn-primary btn-block"
+            >
+              Search
+            </button>
             <hr />
-            <ul id="city-list" class="list-group"></ul> 
+            <ul id="city-list" class="list-group"></ul>
             <!-- end history list-->
           </div>
           <!-- end left column -->
@@ -35,17 +58,17 @@
             <div class="container-fluid">
               <h4>Currently: 2 of 3 (wider)</h4>
 
-              <div id="current-weather" class='card'>
+              <div id="current-weather" class="card">
                 <div class="card-body">
                   <div id="city-date-icon">
-                    <span id='city-name'> </span>
-                    <span id='current-icon'></span>
+                    <span id="city-name"> </span>
+                    <span id="current-icon"></span>
                   </div>
-                    <p class="card-text" id="current-temp"></p>
-                    <p class="card-text" id="current-humidity"></p>
-                    <p class="card-text" id="current-wind"></p>
-                    <p class="card-text" id="current-uv"></p>
-                        <!-- </ul> -->
+                  <p class="card-text" id="current-temp"></p>
+                  <p class="card-text" id="current-humidity"></p>
+                  <p class="card-text" id="current-wind"></p>
+                  <p class="card-text" id="current-uv"></p>
+                  <!-- </ul> -->
                 </div>
               </div>
 
@@ -57,9 +80,56 @@
               </ul> -->
 
               <hr />
-              <h4>5-Day Forecast:</h4>
+              <div class="row">
+                <div id="forecast-weather" class="col-md-9">
+                  <h4>5-Day Forecast:</h4>
+                  <div id="forecast-cards">
+                    <div class="card forecast">
+                      <div id="forecast1" class="card-body">
+                        <span class="card-title" id="forecast-date1"> </span>
+                        <span id="forecast-icon1"></span>
+                        <p class="card-text" id="forecast-temp1"></p>
+                        <p class="card-text" id="forecast-humidity1"></p>
+                      </div>
+                    </div>
+                    <div class="card forecast">
+                      <div id="forecast2" class="card-body">
+                        <span class="card-title" id="forecast-date2"> </span>
+                        <span id="forecast-icon2"></span>
+                        <p class="card-text" id="forecast-temp2"></p>
+                        <p class="card-text" id="forecast-humidity2"></p>
+                      </div>
+                    </div>
+                    <div class="card forecast">
+                      <div id="forecast3" class="card-body">
+                        <span class="card-title" id="forecast-date3"> </span>
+                        <span id="forecast-icon3"></span>
+                        <p class="card-text" id="forecast-temp3"></p>
+                        <p class="card-text" id="forecast-humidity3"></p>
+                      </div>
+                    </div>
+                    <div class="card forecast">
+                      <div id="forecast4" class="card-body">
+                        <span class="card-title" id="forecast-date4"> </span>
+                        <span id="forecast-icon4"></span>
+                        <p class="card-text" id="forecast-temp4"></p>
+                        <p class="card-text" id="forecast-humidity4"></p>
+                      </div>
+                    </div>
+                    <div class="card forecast">
+                      <div id="forecast5" class="card-body">
+                        <span class="card-title" id="forecast-date5"> </span>
+                        <span id="forecast-icon5"></span>
+                        <p class="card-text" id="forecast-temp5"></p>
+                        <p class="card-text" id="forecast-humidity5"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div class="card-deck">
-                <div  id="card-list" class="card bg-secondary text-white">
+                <div id="card-list" class="card bg-secondary text-white">
                   <div class="card-body text-center">
                     <p class="card-text">Some text inside the first card</p>
                     <p class="card-text">Some text inside the first card</p>
@@ -115,13 +185,13 @@
         </div>
         <!-- end left to right row -->
       </div>
-    </main> 
+    </main>
     <!-- end main -->
-  <!-- Added link to the jQuery library -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-  <script type="text/javascript" src="./assets/js/script.js"></script>
-  <!-- <script type="text/javascript" src="./assets/js/Examplescript.js"></script> -->
+    <!-- Added link to the jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script type="text/javascript" src="./assets/js/script.js"></script>
+    <!-- <script type="text/javascript" src="./assets/js/Examplescript.js"></script> -->
   </body>
   <!-- end body -->
 </html>
