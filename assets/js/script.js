@@ -39,8 +39,6 @@ function cityWeatherPopulate(city, listCitySearch) {
   })
     // Store all of the retrieved data inside of an object called "weather"
     .then(function (weather) {
-      //   console.log(apiPath);
-      //   console.log(weather);
       var nowMoment = moment();
       var displayMoment = $("<h3>");
       $("#city-name").empty();
@@ -70,27 +68,18 @@ function cityWeatherPopulate(city, listCitySearch) {
       $.ajax({
         url: apiPath3,
         method: "GET",
-        // Store all of the retrieved data inside of an object called "uvIndex"
       }).then(function (uvIndex) {
-        // console.log(uvIndex);
         var displayUvIndex = $("<button>");
         displayUvIndex.addClass("btn btn-danger");
         $("#uvIndexCur").text("UV Index: ");
         $("#uvIndexCur").append(displayUvIndex.text(uvIndex[0].value));
-        // console.log(uvIndex[0].value);
         $.ajax({
           url: apiPath2,
           method: "GET",
-          // Store all of the retrieved data inside of an object called "forecast"
         }).then(function (forecast) {
-          //   console.log(apiPath2);
-          //   console.log(forecast);
-          // Loop through the forecast list array and display a single forecast entry/time (5th entry of each day which is close to the highest temp/time of the day) from each of the 5 days
           for (var i = 6; i < forecast.list.length; i += 8) {
-            // 6, 14, 22, 30, 38
             var forecastDate = $("<h5>");
             var forecastPosition = (i + 2) / 8;
-            // console.log("#forecast-date" + forecastPosition);
             $("#forecast-date" + forecastPosition).empty();
             $("#forecast-date" + forecastPosition).append(
               forecastDate.text(nowMoment.add(1, "days").format("M/D/YYYY"))
@@ -104,16 +93,11 @@ function cityWeatherPopulate(city, listCitySearch) {
             );
             $("#icon-forecast" + forecastPosition).empty();
             $("#icon-forecast" + forecastPosition).append(forecastIcon);
-            // console.log(forecast.list[i].weather[0].icon);
             $("#temp-forecast" + forecastPosition).text(
               "Temp: " + forecast.list[i].main.temp + " °F"
             );
             $("#humid-forecast" + forecastPosition).text(
               "Humidity: " + forecast.list[i].main.humidity + "%"
-            );
-            $(".forecast").attr(
-              "style",
-              "background-color:lightgray"
             );
           }
         });
@@ -133,7 +117,6 @@ $(document).ready(function () {
     event.preventDefault();
     var city = $("#city-input").val().trim().toLowerCase();
     if (city != "") {
-      //Check to see if there is any text entered
       listCitySearch[city] = true;
       localStorage.setItem("listCitySearch", JSON.stringify(listCitySearch));
       cityWeatherPopulate(city, listCitySearch);
