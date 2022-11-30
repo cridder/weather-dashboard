@@ -1,51 +1,25 @@
 hr {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0);
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0);
 }
 
-#forecast-cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: center/space-between;
+#cards-forecast {
+  display: flex;
+  flex-direction: row;
+  justify-content: center/space-between;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
-}
-
-.heading {
-  background-color: #3c3c3c;
-  color: #ffffff;
-  text-align: center;
-  padding: 10px;
-}
-
-
-#city-date-icon,
+#icon-date-city,
 #city-name,
-#current-icon {
-    display: flex;
-    flex-direction: row;
-    justify-content: center/space-around/space-between;
-}
-
-h6 {
-  font-weight: bold;
-}
-
-h4 {
-    margin: 5px;
-}
-
-#forecast-cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: center/space-between;
+#cur-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center/space-around/space-between;
 }
 
 .forecast {
-    margin: 10px;
+  margin: 5px;
 }

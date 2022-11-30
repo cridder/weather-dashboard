@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
-    >
-    <link
+    />
+    <!-- <link
       rel="stylesheet"
       href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
-    >
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="https://kit.fontawesome.com/70fcd40144.js" crossorigin="anonymous"></script>
+    /> -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- <script
+      src="https://kit.fontawesome.com/70fcd40144.js"
+      crossorigin="anonymous"
+    ></script> -->
   </head>
   <!-- end head -->
 
@@ -29,38 +32,44 @@
     <!-- end div -->
 
     <main class="d-flex min-vw-100">
-      <div class="container-fluid border border-dark">
-        <div class="row border border-dark">
-          <div class="col-sm-4 border">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-4">
             <div class="form-group">
-              <input type="text" class="form-control" id="city-input" placeholder="Search for City......">
+              <input
+                type="text"
+                class="form-control"
+                id="city-input"
+                placeholder="Search for City......"
+              />
             </div>
+            <!-- end search input -->
+            <hr />
             <button
-              id="search-button"
+              id="srchbutton"
               type="submit"
               class="btn btn-primary btn-block"
             >
               Search
             </button>
             <hr />
-            <ul id="city-list" class="list-group"></ul>
+            <ul id="list-of-cities" class="list-group"></ul>
             <!-- end history list-->
           </div>
           <!-- end left column -->
-          <div id="current-and-cards" class="col-sm-8 border">
+          <div id="cur-and-cards" class="col-sm-8">
             <div class="container-fluid">
-              <!-- <h4>Currently: 2 of 3 (wider)</h4> -->
-
-              <div id="current-weather" class="card">
+              <div id="cur-weather" class="card">
+                <h4>Currently:</h4>
                 <div class="card-body">
-                  <div id="city-date-icon">
+                  <div id="icon-date-city">
                     <span id="city-name"> </span>
-                    <span id="current-icon"></span>
+                    <span id="cur-icon"></span>
                   </div>
-                  <p class="card-text" id="current-temp"></p>
-                  <p class="card-text" id="current-humidity"></p>
-                  <p class="card-text" id="current-wind"></p>
-                  <p class="card-text" id="current-uv"></p>
+                  <p id="cur-temp"></p>
+                  <p id="cur-humid"></p>
+                  <p id="cur-wind"></p>
+                  <p id="uvIndexCur"></p>
                   <!-- </ul> -->
                 </div>
               </div>
@@ -68,45 +77,45 @@
               <div class="row">
                 <div id="forecast-weather" class="col-md-9">
                   <h4>5-Day Forecast:</h4>
-                  <div id="forecast-cards">
+                  <div id="cards-forecast">
                     <div class="card forecast">
                       <div id="forecast1" class="card-body">
                         <span class="card-title" id="forecast-date1"> </span>
-                        <span id="forecast-icon1"></span>
-                        <p class="card-text" id="forecast-temp1"></p>
-                        <p class="card-text" id="forecast-humidity1"></p>
+                        <span id="icon-forecast1"></span>
+                        <p id="temp-forecast1"></p>
+                        <p id="humid-forecast1"></p>
                       </div>
                     </div>
                     <div class="card forecast">
                       <div id="forecast2" class="card-body">
                         <span class="card-title" id="forecast-date2"> </span>
-                        <span id="forecast-icon2"></span>
-                        <p class="card-text" id="forecast-temp2"></p>
-                        <p class="card-text" id="forecast-humidity2"></p>
+                        <span id="icon-forecast2"></span>
+                        <p id="temp-forecast2"></p>
+                        <p id="humid-forecast2"></p>
                       </div>
                     </div>
                     <div class="card forecast">
                       <div id="forecast3" class="card-body">
                         <span class="card-title" id="forecast-date3"> </span>
-                        <span id="forecast-icon3"></span>
-                        <p class="card-text" id="forecast-temp3"></p>
-                        <p class="card-text" id="forecast-humidity3"></p>
+                        <span id="icon-forecast3"></span>
+                        <p id="temp-forecast3"></p>
+                        <p id="humid-forecast3"></p>
                       </div>
                     </div>
                     <div class="card forecast">
                       <div id="forecast4" class="card-body">
                         <span class="card-title" id="forecast-date4"> </span>
-                        <span id="forecast-icon4"></span>
-                        <p class="card-text" id="forecast-temp4"></p>
-                        <p class="card-text" id="forecast-humidity4"></p>
+                        <span id="icon-forecast4"></span>
+                        <p id="temp-forecast4"></p>
+                        <p id="humid-forecast4"></p>
                       </div>
                     </div>
                     <div class="card forecast">
                       <div id="forecast5" class="card-body">
                         <span class="card-title" id="forecast-date5"> </span>
-                        <span id="forecast-icon5"></span>
-                        <p class="card-text" id="forecast-temp5"></p>
-                        <p class="card-text" id="forecast-humidity5"></p>
+                        <span id="icon-forecast5"></span>
+                        <p id="temp-forecast5"></p>
+                        <p id="humid-forecast5"></p>
                       </div>
                     </div>
                   </div>
@@ -118,15 +127,12 @@
         <!-- end left to right row -->
       </div>
       <!-- end of main div -->
-
     </main>
     <!-- end main -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
     <script type="text/javascript" src="./assets/js/script.js"></script>
-
   </body>
   <!-- end body -->
 </html>
